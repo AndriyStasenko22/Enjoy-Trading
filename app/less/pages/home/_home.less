@@ -1,0 +1,46 @@
+ // 01 Home
+
+ .sectiom-home{
+   &:extend(.bgi-center);
+   background-image: url('/img/2.png');
+   .home-request-block{
+     width: 100%;
+     display: block;
+     text-align: right;
+   }
+   .home-logo-block{
+     text-align: center;
+     margin: 71px 0 218px;
+   }
+
+   .home-center-block{
+     &:extend(.flex);
+     justify-content: space-between;
+     padding: 0 66px;
+   }
+   .section-container{
+     &:extend(.flex);
+   }
+   .section-title-block{
+     margin:0 auto 75px;
+     .section-title-name{
+       color: #ffffff;
+       font-size: 60px;
+       margin-top: 30px;
+       letter-spacing: 6px;
+     }
+   }
+   .section-home-description{
+     margin-bottom: 150px;
+     margin-left: auto;
+     margin-right: 27px;
+     text-align: right;
+     max-width: 835px;
+     //width: 100%;
+     opacity: 0.79;
+     color: #fffffe;
+     font: 18px/36px @Roboto-Black;
+     text-transform: uppercase;
+     letter-spacing: 1.8px;
+   }
+ }
