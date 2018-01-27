@@ -52,6 +52,8 @@ input, textarea, button, select {
   position: relative;
   height: 42px;
   width: 42px;
+  top: -13px;
+  left: -5px;
   display: inline-block;
   text-align: center;
   background: url("/img/button-up.png") 0 0 no-repeat;
@@ -96,7 +98,7 @@ footer {
     background-color: #fff;
     z-index: 5;
     .footer-desription {
-      margin: 33px 0 103px;
+      margin: 17px 0 100px;;
       color: #102323;
       font: 14px @Forum;
     }
@@ -126,7 +128,8 @@ footer {
   background-color: #829665;
   color: #ffffff;
   text-transform: uppercase;
-  font: 14px/55px @Roboto-Black;
+  font: 14px/59px @Roboto-Black;
+  letter-spacing: 2.8px;
   &:hover {
     color: #102323;
     border-color: #102323;
@@ -143,6 +146,7 @@ footer {
   text-transform: uppercase;
   display: inline-block;
   text-align: center;
+  letter-spacing: 2.8px;
   &:hover {
     color: #102323;
   }
@@ -158,6 +162,7 @@ footer {
   .section-number-line {
     font-size: 36px;
     color: #829665;
+    letter-spacing: 2px;
     &:after {
       display: inline-block;
       height: 9px;
@@ -165,7 +170,7 @@ footer {
       content: '';
       width: 146px;
       vertical-align: bottom;
-      margin-left: 25px;
+      margin-left: 21px;
       position: relative;
     }
   }
@@ -173,25 +178,28 @@ footer {
     font-size: 48px;
     color: #102323;
     margin-top: 40px;
-    letter-spacing: 3.3px;
+    letter-spacing: 4px;
   }
 }
 
 .section-container {
-  width: 1270px;
+  width: 1216px;
   margin: 0 auto;
 }
 
 .navigation-list {
   position: fixed;
   top: 50%;
-  left: 60px;
+  right: 62px;
   transform: translateY(-50%);
   width: 50px;
   li {
     display: block;
     width: 100%;
     text-align: center;
+    margin-bottom: 49px;
+    font-size: 0;
+    line-height: 1;
     &.active {
       .navigation-item {
         width: 100%;
@@ -200,6 +208,7 @@ footer {
         border-radius: 0;
         background-color: #102323;
         border-color: #102323;
+        height: 8px;
       }
     }
     .navigation-item {
@@ -228,8 +237,10 @@ footer {
   text-align: center;
   li {
     text-align: center;
+    font-size: 0;
+    line-height: 1;
     a {
-      font-size: 20px;
+      font-size: 23px;
       color: #302f2f;
       line-height: 1;
       .fa {

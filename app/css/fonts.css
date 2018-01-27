@@ -47,3 +47,11 @@
     src:
             url("../fonts/Forum/Forum-Regular.ttf") format("truetype");
 }
+
+@font-face {
+    font-family: "Arial MT";
+    font-style: normal;
+    font-weight: normal;
+    src:
+            url("../fonts/ArialMt/ARIALMT.ttf") format("truetype");
+}
