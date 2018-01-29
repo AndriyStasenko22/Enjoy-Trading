@@ -1,7 +1,7 @@
 .contact-form-wrap {
   &:extend(.center_align, .bgi-center);
   flex-direction: column;
-  background-image: url('/img/contact-bgi.jpg');
+  background-image: url('../img/contact-bgi.jpg');
   width: 100%;
   max-width: 1605px;
   margin: 0 auto;
@@ -36,7 +36,6 @@
     input {
       background-color: transparent;
       color: #fff;
-      //padding: 0 10px;
       padding-left: 51px;
       padding-right: 10px;
       font-size: 16px;
@@ -105,6 +104,9 @@
 .contact-logo-block {
   width: 99px;
   margin: 100px auto 70px;
+  @media only screen and (max-width: 768px) {
+    margin: 35px auto 35px;
+  }
 }
 
 .contact-information-block {
@@ -117,6 +119,17 @@
     margin-bottom: 11px;
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+  @media only screen and (max-width: 670px) {
+    p{
+      letter-spacing: normal;
+      &:first-child{
+        font-size: 24px;
+      }
+      &:last-child{
+        font-size: 20px;
+      }
     }
   }
 }

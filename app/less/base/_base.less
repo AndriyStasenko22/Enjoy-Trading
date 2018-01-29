@@ -1,15 +1,12 @@
-//html, body {
-//  height: 100%;
-//  min-height: 100%;
-//}
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
 
 body {
   position: relative;
   overflow-x: hidden;
   font-family: @Roboto;
-  background: #fff url("/img/2.png") top left no-repeat;
-  -webkit-background-size: contain;
-  background-size: contain;
 }
 
 ul, li {
@@ -56,7 +53,7 @@ input, textarea, button, select {
   left: -5px;
   display: inline-block;
   text-align: center;
-  background: url("/img/button-up.png") 0 0 no-repeat;
+  background: url("../img/button-up.png") 0 0 no-repeat;
   -webkit-transition: none;
   -moz-transition: none;
   -ms-transition: none;
@@ -70,7 +67,6 @@ input, textarea, button, select {
 footer {
   position: relative;
   width: 100%;
-  border-bottom: 1px solid #000;
   &:after, &:before {
     position: absolute;
     top: 8px;
@@ -97,10 +93,17 @@ footer {
     position: relative;
     background-color: #fff;
     z-index: 5;
-    .footer-desription {
-      margin: 17px 0 100px;;
-      color: #102323;
-      font: 14px @Forum;
+    @media only screen and (max-width: 670px) {
+      max-width: 215px;
+    }
+  }
+  .footer-desription {
+    text-align: center;
+    margin: 17px 0 100px;;
+    color: #102323;
+    font: 14px @Forum;
+    @media only screen and (max-width: 768px) {
+      margin-bottom: 40px;
     }
   }
 }
@@ -152,6 +155,30 @@ footer {
   }
 }
 
+.partners-form-button {
+  width: 221px;
+  height: 63px;
+  background-color: #829665;
+  display: inline-block;
+  color: #ffffff;
+  font: 16px/63px @Roboto-Bold;
+  letter-spacing: 1.6px;
+  border: 2px solid #829665;
+  cursor: pointer;
+  transition: border .3s, color .3s, background-color .3s;
+  &:hover {
+    border: 2px solid #102323;
+    color: #102323;
+    background-color: transparent;
+  }
+  @media only screen and (max-width: 768px) {
+    border-width: 1px;
+    width: 174px;
+    height: 50px;
+    line-height: 50px;
+  }
+}
+
 .section-title-block {
   &:extend(.flex);
   flex-direction: column;
@@ -183,7 +210,8 @@ footer {
 }
 
 .section-container {
-  width: 1216px;
+  width: 100%;
+  max-width: 1216px;
   margin: 0 auto;
 }
 
@@ -253,44 +281,392 @@ footer {
   }
 }
 
-//@keyframes animRectangle {
-//  0% {
-//    -webkit-border-radius: 50%;
-//    -moz-border-radius: 50%;
-//    border-radius: 50%;
-//    border-color: #c5cbcc;
-//    width: 11px;
-//  }
-//  20% {
-//    -webkit-border-radius: 0;
-//    -moz-border-radius: 0;
-//    border-radius: 0;
-//    border-color: #102323;
-//    background: #102323;
-//    width: 11px;
-//  }
-//  60% {
-//    -webkit-border-radius: 0;
-//    -moz-border-radius: 0;
-//    border-radius: 0;
-//    background: #102323;
-//    border-color: #102323;
-//    width: 11px;
-//  }
-//  80%{
-//    -webkit-border-radius: 0;
-//    -moz-border-radius: 0;
-//    border-radius: 0;
-//    border-color: #102323;
-//    background: #102323;
-//    width: 50%;
-//  }
-//  100% {
-//    -webkit-border-radius: 0;
-//    -moz-border-radius: 0;
-//    border-radius: 0;
-//    border-color: #102323;
-//    background: #102323;
-//    width: 100%;
-//  }
-//}
+.page-title {
+  font: 24px @Roboto-Bold;
+  width: 100%;
+  text-align: left;
+}
+
+.page-border-line {
+  width: 100%;
+  text-align: left;
+
+  span {
+    display: inline-block;
+    width: 151px;
+    height: 9px;
+    background-color: #829665;
+  }
+}
+
+.page-block-title {
+  color: #292929;
+  font: 14px @Roboto-Bold;
+  text-transform: uppercase;
+  letter-spacing: 2.4px;
+}
+
+.page-block p {
+  margin-bottom: 20px;
+}
+
+.page-block-description {
+  color: #000000;
+  font: 16px @Forum;
+  b, strong {
+    font-family: @Roboto-Bold;
+    font-weight: normal;
+  }
+  b {
+    display: block;
+  }
+}
+
+.page-section {
+  width: 100%;
+  //max-width: 1216px;
+  margin: 0 auto;
+  .page-content {
+    &:extend(.flex);
+  }
+  &.page-service {
+    max-width: 1316px;
+    padding: 0 50px;
+    .page-title {
+      margin: 90px 0;
+    }
+    .page-block {
+      width: 26.15%;
+      margin-right: 10.775%;
+      margin-bottom: 40px;
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+    .page-border-line {
+      margin: 50px 0;
+    }
+    @media only screen and (max-width: 768px) {
+      .page-block {
+        width: 44.6125%;
+        &:nth-child(3n) {
+          margin-right: 10.775%;
+        }
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+        b{
+          margin-bottom: 20px;
+        }
+      }
+      .page-border-line {
+        margin-bottom: 35px;
+      }
+    }
+    @media only screen and (max-width: 480px) {
+      padding: 0 33px;
+      .page-title{
+        margin: 50px 0 35px;
+      }
+      .page-content {
+        justify-content: center;
+      }
+
+      .page-block {
+        width: 63%;
+        margin-right: 0 !important;
+        margin-bottom: 20px;
+      }
+      .page-border-line {
+        margin: 16px 0 25px;
+      }
+    }
+  }
+  &.page-about {
+    max-width: 1300px;
+    padding-left: 39px;
+    padding-right: 44px;
+    margin-bottom: 125px;
+    .page-about-info {
+      margin-top: 90px;
+      width: 100%;
+      max-width: 685px;
+      .page-title {
+        margin-bottom: 50px;
+      }
+      p {
+        margin-bottom: 20px;
+      }
+    }
+    .page-content .page-title {
+      margin: 20px 0 75px;
+    }
+    .page-block {
+      width: 26.15%;
+      margin-right: 10.775%;
+      margin-bottom: 45px;
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+    .page-border-line {
+      margin-bottom: 45px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .page-block {
+        width: 28.15%;
+        margin-right: 7.775%;
+      }
+
+      .page-border-line {
+        margin-bottom: 35px;
+      }
+
+      .page-about-info {
+        margin-top: 40px;
+        .page-title {
+          margin-bottom: 20px;
+        }
+      }
+
+      .page-content .page-title {
+        margin: 0px 0 40px;
+      }
+    }
+    @media only screen and (max-width: 670px) {
+      margin-bottom: 0;
+      .page-title, .page-block-description {
+        font-size: 14px;
+      }
+
+      .page-content .page-title {
+        margin: 0px 0 40px;
+        padding: 0 12px;
+      }
+    }
+    @media only screen and (max-width: 600px) {
+      .page-content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .page-block {
+        width: 69.19%;
+        margin-right: 0;
+      }
+
+      .page-border-line {
+        margin-bottom: 25px;
+      }
+    }
+  }
+  &.page-partners {
+    max-width: 1315px;
+    padding-left: 32px;
+    padding-right: 67px;
+    .page-partners-info {
+      margin: 85px 0 50px;
+      width: 100%;
+      max-width: 550px;
+      p {
+        margin-bottom: 20px;
+      }
+      .page-border-line {
+        margin: 20px 0 45px;
+      }
+    }
+    @media only screen and (max-width: 768px) {
+      .page-partners-info {
+        padding-left: 20px;
+        margin: 67px 0 23px;
+      }
+
+    }
+    @media only screen and (max-width: 670px) {
+      padding: 0 30px;
+      .page-partners-info {
+        padding-left: 0;
+        margin: 45px 0 20px;
+        .page-border-line {
+          margin: 18px 0 26px;
+        }
+      }
+    }
+  }
+}
+
+.partners-form {
+  &:extend(.flex);
+  margin-bottom: 71px;
+  .left-column, .right-column {
+    max-width: 518px;
+    width: 100%;
+    text-align: center;
+  }
+  .left-column {
+    margin-right: 80px;
+  }
+  input, textarea {
+    width: 100%;
+    border: 1px solid #102323;
+    outline: none;
+    box-shadow: none;
+    margin-bottom: 49px;
+    color: #102323;
+    font: 16px @Forum;
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: #aaaeaf;
+      font: 16px @Forum;
+      letter-spacing: 1.6px;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: #aaaeaf;
+      font: 16px @Forum;
+      letter-spacing: 1.6px;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: #aaaeaf;
+      font: 16px @Forum;
+      letter-spacing: 1.6px;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: #aaaeaf;
+      font: 16px @Forum;
+      letter-spacing: 1.6px;
+    }
+    &:focus {
+      &::-webkit-input-placeholder {
+        color: transparent;
+      }
+      &:-moz-placeholder {
+        color: transparent;
+      }
+      &::-moz-placeholder {
+        color: transparent;
+      }
+      &:-ms-input-placeholder {
+        color: transparent;
+      }
+    }
+  }
+  input {
+    height: 85px;
+    line-height: 85px;
+    padding: 0 30px;
+  }
+  textarea {
+    min-height: 206px;
+    padding: 30px;
+  }
+
+  @media only screen and (max-width: 1215px) {
+    .left-column, .right-column {
+      width: 47.53%;
+    }
+
+    .left-column {
+      margin-right: 4.94%;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    input {
+      height: 73px;
+      line-height: 73px;
+    }
+
+    input, textarea {
+      margin-bottom: 45px;
+    }
+
+    textarea {
+      min-height: 191px;
+    }
+  }
+  @media only screen and (max-width: 540px) {
+    justify-content: center;
+    .left-column, .right-column {
+      width: 86.53%;
+    }
+
+    .left-column {
+      margin-right: 0;
+    }
+
+    input {
+      height: 52px;
+      line-height: 52px;
+      padding: 0 24px;
+    }
+
+    textarea {
+      padding: 18px 18px 18px 24px;
+      min-height: 150px;
+    }
+
+    input, textarea {
+      margin-bottom: 19px;
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        font-size: 12px;
+      }
+      &::-moz-placeholder { /* Firefox 19+ */
+        font-size: 12px;
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+        font-size: 12px;
+      }
+      &:-ms-input-placeholder { /* IE 10+ */
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.page-layout {
+  footer {
+    border-bottom: 1px solid #000;
+  }
+  @media only screen and (max-width: 768px) {
+    .menu-wrap {
+      .menu-block {
+        width: 82.55%;
+        .menu-list li .menu-item {
+          font-size: 14px;
+        }
+      }
+      .menu-logo-block {
+        width: 17.45%;
+        background: url('../img/logo-mobile.png') center center no-repeat;
+        background-size: auto 70%;
+        img {
+          display: none;
+        }
+      }
+    }
+
+    .contact-form-wrap {
+      height: 107px;
+      min-height: auto;
+      & > * {
+        display: none;
+      }
+    }
+  }
+  @media only screen and (max-width: 670px) {
+    .contact-form-wrap {
+      height: 64px;
+    }
+  }
+}
+
+.hidden-mobile {
+  @media only screen and (max-width: 670px) {
+    display: none;
+  }
+}
+
+.hidden-tablet{
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+}

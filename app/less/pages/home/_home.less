@@ -1,5 +1,9 @@
 // 01 Home
 
+.home-loyout {
+  background: #fff url("../img/2.png") top center no-repeat;
+}
+
 .sectiom-home {
   .home-request-block {
     width: 100%;
@@ -14,7 +18,7 @@
   .home-center-block {
     display: flex;
     justify-content: space-between;
-    padding: 0 50px;
+    padding: 0 4.11%;
   }
   .home-container {
     width: 100%;
@@ -23,7 +27,7 @@
   }
   .section-title-block {
     margin: 0 auto 64px;
-    padding-left: 70px;
+    padding-left: 3.166%;
     .section-title-name {
       color: #ffffff;
       font-size: 60px;
@@ -34,7 +38,7 @@
   .section-home-description {
     margin-bottom: 148px;
     margin-left: auto;
-    margin-right: 260px;
+    margin-right: 16.47%;
     text-align: right;
     max-width: 835px;
     opacity: 0.79;
@@ -44,7 +48,7 @@
     letter-spacing: 1.3px;
   }
   .home-social-block {
-    padding-left: 44px;
+    padding-left: 30px;
     .social-list {
       font-size: 0;
       li {
@@ -66,11 +70,11 @@
     }
   }
 
-  .home-scroll-down-block{
-    width: 66px;
+  .home-scroll-down-block {
+    width: 22px;
     &:extend(.vertical_align);
     flex-direction: column;
-    .scroll-down-circle{
+    .scroll-down-circle {
       display: block;
       width: 22px;
       height: 22px;
@@ -80,9 +84,9 @@
       border: 1px solid #ffffff;
       margin-bottom: 107px;
     }
-    .scroll-down-text{
+    .scroll-down-text {
       color: #ffffff;
-      font:16px "Arial";
+      font: 16px "Arial";
       text-transform: uppercase;
       letter-spacing: 1.6px;
       transform: rotate(90deg);
@@ -90,22 +94,89 @@
     }
   }
 
-  .list-angles{
+  .list-angles {
     margin-top: 135px;
     color: #ffffff;
-    li{
+    li {
       font-size: 35px;
       line-height: 1;
       position: relative;
-      .fa{
+      .fa {
         line-height: 1;
       }
-      &:first-child{
+      &:first-child {
         top: 35px;
       }
-      &:nth-child(2){
+      &:nth-child(2) {
         top: 13px;
       }
+    }
+  }
+
+  @media only screen and(max-width: 768px) {
+    .menu-wrap .menu-block {
+      width: 100%;
+      padding-right: 54px;
+    }
+
+    .home-social-block {
+      padding-left: 0;
+      margin-top: 118px;
+    }
+
+    .home-center-block {
+      padding: 0 54px;
+    }
+
+    .home-logo-block {
+      margin: 71px 0 103px;
+    }
+
+    .section-home-description {
+      margin-bottom: 246px;
+      text-align: left;
+      margin-right: 6%;
+      margin-left: 9%;
+    }
+
+    .section-title-block {
+      margin: 0 auto 52px;
+      padding-left: 4.166%;
+    }
+
+    .home-scroll-down-block {
+      margin-top: 118px;
+      .scroll-down-circle {
+        width: 14px;
+        height: 14px;
+        margin-bottom: 73px;
+      }
+      .scroll-down-text {
+        font-size: 10px;
+      }
+    }
+
+    .list-angles {
+      margin-top: 35px;
+      li {
+        font-size: 27px;
+        &:first-child {
+          top: 37px;
+        }
+        &:nth-child(2) {
+          top: 18px;
+        }
+        &:last-child {
+          top: 10px;
+        }
+      }
+    }
+  }
+  @media only screen and(max-width: 670px) {
+    .menu-wrap .menu-block {
+      width: 86.875%;
+      padding-right: 0;
+      height: 43px;
     }
   }
 }
@@ -139,6 +210,10 @@
       padding-right: 11px;
       width: 48.5%;
       left: -12px;
+      img {
+        position: relative;
+        z-index: 2;
+      }
       &:after {
         position: absolute;
         right: 0;
@@ -146,12 +221,11 @@
         width: 100%;
         height: 162px;
         content: '';
-        z-index: -1;
         background-color: #36444b;
       }
     }
     .section-about-content {
-      margin-top: 280px;
+      margin-top: 14.58%;
       width: 42%;
       margin-left: 8.7%;
     }
@@ -170,6 +244,45 @@
       }
     }
   }
+  @media only screen and(max-width: 768px) {
+    margin: 155px 0 95px;
+    .section-about-top-block {
+      padding-left: 17%;
+    }
+
+    .section-title-block {
+      width: 100%;
+    }
+
+    .section-about-top-description {
+      width: 83%;
+      margin-top: 32px;
+    }
+
+    .section-about-bottom-block {
+      .section-about-content {
+        margin-top: 7%;
+        width: 37%;
+        margin-left: 9.7%;
+        .section-about-button-block p{
+          display: none;
+        }
+      }
+      .sectiom-about-short-info{
+        margin-bottom: 35px;
+      }
+      .sectiom-about-image-block {
+        padding-right: 4px;
+        width: 40%;
+        img {
+          width: 85%;
+        }
+        &:after {
+          height: 81px;
+        }
+      }
+    }
+  }
 }
 
 .service {
@@ -179,7 +292,7 @@
     align-items: flex-start;
   }
   .service-info-block {
-    width: 30.5%;
+    width: 24.5%;
   }
   .section-title-block {
     margin: 30px 0 65px;
@@ -200,9 +313,13 @@
   }
   .service-image-block {
     position: relative;
-    width: 50.20%;
+    width: 50.32%;
     text-align: center;
-    margin-left: 13.81%;
+    margin-left: 20.55%;
+    img {
+      position: relative;
+      z-index: 2;
+    }
     &:after {
       position: absolute;
       right: 0;
@@ -211,7 +328,7 @@
       height: 161px;
       background-color: #102323;
       content: '';
-      z-index: -1;
+      z-index: 1;
     }
   }
 
@@ -253,6 +370,7 @@
   .partners-image-block {
     position: relative;
     cursor: pointer;
+    display: inline-block;
     &:hover {
       & > .partners-popup {
         transform: scale(1);
@@ -272,10 +390,10 @@
     opacity: 0;
     transform: scale(.3);
     transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
-    .partners-popup-info{
+    .partners-popup-info {
       margin-top: 30px;
       color: #ffffff;
-      font:16px/18px @Forum;
+      font: 16px/18px @Forum;
       letter-spacing: 1.6px;
     }
   }
@@ -288,18 +406,26 @@
     letter-spacing: 1.8px;
     padding-left: 50px;
     margin-bottom: 37px;
+    a {
+      color: #829665;
+      &:hover {
+        color: #c5cbcc;
+      }
+    }
     &:before {
       position: absolute;
       width: 16px;
       height: 16px;
       top: 0;
       left: 6px;
-      background: url("/img/partners-circle.png") top left / 100% 100% no-repeat;
+      background: url("../img/partners-circle.png") top left / 100% 100% no-repeat;
       content: '';
     }
   }
   .partners-table-block {
     width: 1268px;
+    width: 100%;
+    max-width: 1268px;
     flex-wrap: nowrap;
     margin: 0 auto;
     position: relative;

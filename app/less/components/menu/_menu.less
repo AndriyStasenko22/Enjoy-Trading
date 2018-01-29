@@ -1,12 +1,13 @@
 .menu-wrap {
   &:extend(.flex);
   justify-content: flex-start;
-  .menu-logo-block{
+  .menu-logo-block {
     background-color: #ffffff;
     width: 20.6%;
     &:extend(.center_align);
   }
   .menu-block {
+    position: relative;
     width: 79.4%;
     background-color: #102323;
     .menu-list {
@@ -15,6 +16,9 @@
       & > li {
         width: 20%;
         text-align: center;
+        &.active .menu-item:before {
+          top: 0;
+        }
         .menu-item {
           display: block;
           position: relative;
@@ -41,7 +45,6 @@
           }
           &:hover:before {
             top: 0;
-
           }
           &:active {
             color: #829665;
@@ -49,6 +52,92 @@
           span {
             color: #829665;
           }
+        }
+      }
+    }
+    .menu-mobile-button {
+      display: none;
+      position: absolute;
+      top: 10px;
+      right: 70px;
+    }
+    @media only screen and (max-width: 670px) {
+      height: 53px;
+      .menu-list {
+        display: none;
+      }
+
+      .menu-mobile-button {
+        display: block;
+      }
+    }
+  }
+}
+
+.mobile-menu {
+  position: absolute;
+  top: -105%;
+  left: 0;
+  min-height: 583px;
+  background-color: #102323;
+  width: 100%;
+  z-index: 10;
+  transition: top .4s ease-in-out;
+  &.open{
+    top: 0;
+  }
+  .mobile-menu-close {
+    padding: 31px 47px;
+    margin-bottom: 24px;
+    text-align: right;
+    font-size: 0;
+    .menu-close-button {
+      line-height: 1;
+      display: inline-block;
+    }
+  }
+  .menu-list {
+    width: 100%;
+    li {
+      display: block;
+      width: 100%;
+      text-align: center;
+      line-height: 1;
+      font-size: 0;
+      margin-bottom: 61px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      &.active>.menu-item:before{
+        left: 0;
+      }
+      .menu-item {
+        position: relative;
+        line-height: 1;
+        color: #ffffff;
+        font: 14px/1 @Roboto;
+        font-weight: 500;
+        text-transform: uppercase;
+        display: block;
+        &:hover:before{
+          left: 0;
+        }
+        &:active{
+          color: #829665;
+        }
+        span {
+          color: #829665;
+          letter-spacing: 1.4px;
+        }
+        &:before{
+          position: absolute;
+          top: 0;
+          left: -100px;
+          content: '';
+          width: 91px;
+          height: 9px;
+          background-color: #829665;
+          transition: left .4s ease-in-out;
         }
       }
     }
