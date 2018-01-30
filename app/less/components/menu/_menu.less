@@ -75,16 +75,18 @@
 }
 
 .mobile-menu {
-  position: absolute;
-  top: -105%;
+  position: fixed;
+  top: 0%;
   left: 0;
-  min-height: 583px;
+  //min-height: 583px;
+  height: 100vh;
   background-color: #102323;
   width: 100%;
   z-index: 10;
-  transition: top .4s ease-in-out;
+  transform: translateY(-150%);
+  transition: transform .4s ease-in-out;
   &.open{
-    top: 0;
+    transform: translateY(0%);
   }
   .mobile-menu-close {
     padding: 31px 47px;

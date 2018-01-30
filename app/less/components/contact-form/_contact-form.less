@@ -2,19 +2,10 @@
   &:extend(.center_align, .bgi-center);
   flex-direction: column;
   background-image: url('../img/contact-bgi.jpg');
-  //width: 100%;
-  //max-width: 1605px;
   width: 83.59375%;
   margin: 0 auto;
   min-height: 353px;
-  //@media only screen and (max-width: 1350px){
-  //  max-width: none;
-  //  width: 80%;
-  //  //padding: 0 10%;
-  //  //padding-left: 5%;
-  //  //padding-right: 15%;
-  //}
-  @media only screen and (max-width: 768px){
+  @media only screen and (max-width: 768px) {
     max-width: none;
     width: 100%;
   }
@@ -33,14 +24,25 @@
     font: 16px/30px @Forum;
     margin-bottom: 30px;
   }
-  @media only screen and (max-width: 768px){
+  @media only screen and (max-width: 768px) {
     max-width: 65%;
-    .contact-form-title{
+    .contact-form-title {
       font-size: 24px;
       line-height: 1;
     }
-    .contact-form-info{
+
+    .contact-form-info {
       line-height: 1.3em;
+    }
+  }
+  @media only screen and (max-width: 630px) {
+    .contact-form-title {
+      font-size: 16px;
+      margin-bottom: 35px;
+    }
+
+    .contact-form-info {
+      display: none;
     }
   }
 }
@@ -120,23 +122,50 @@
         border-color: #fff;
       }
     }
-    @media only screen and (max-width: 1000px){
+    @media only screen and (max-width: 1000px) {
       input, button {
         height: 44px;
         line-height: 44px;
         width: 203px;
         font-size: 12px !important;
         &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-          font-size: 12px;
+          font: 12px/42px @Roboto;
         }
         &::-moz-placeholder { /* Firefox 19+ */
-          font-size: 12px;
+          font: 12px/42px @Roboto;
         }
         &:-moz-placeholder { /* Firefox 18- */
-          font-size: 12px;
+          font: 12px/42px @Roboto;
         }
         &:-ms-input-placeholder { /* IE 10+ */
-          font-size: 12px;
+          font: 12px/42px @Roboto;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 630px) {
+    width: 100%;
+    .contact-form {
+      width: 100%;
+      flex-direction: column;
+      input, button {
+        width: 44.375%;
+        font-size: 9px;
+      }
+      input {
+        margin-bottom: 5px;
+        padding-left: 25px;
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+          font-size: 9px;
+        }
+        &::-moz-placeholder { /* Firefox 19+ */
+          font-size: 9px;
+        }
+        &:-moz-placeholder { /* Firefox 18- */
+          font-size: 9px;
+        }
+        &:-ms-input-placeholder { /* IE 10+ */
+          font-size: 9px;
         }
       }
     }
@@ -164,12 +193,12 @@
     }
   }
   @media only screen and (max-width: 670px) {
-    p{
+    p {
       letter-spacing: normal;
-      &:first-child{
+      &:first-child {
         font-size: 24px;
       }
-      &:last-child{
+      &:last-child {
         font-size: 20px;
       }
     }
@@ -185,11 +214,14 @@
       font-size: 0;
       width: 60px;
       margin: 0 10px;
+      @media only screen and (max-width: 545px) {
+        width: 40px;
+      }
     }
   }
 }
 
-.contact-adress{
+.contact-adress {
   color: #102323;
   font: 16px/24px @Forum;
   letter-spacing: 0.8px;
