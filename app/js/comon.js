@@ -39,7 +39,7 @@ $(document).ready(function () {
         $(document).on("scroll", onScroll);
         $(menu_selector + " a").click(function (e) {
             e.preventDefault();
-            $(document).off("scroll");
+            // $(document).off("scroll");
             $(menu_selector + " li.active").removeClass("active");
             $(this).parent().addClass("active");
             var hash = $(this).attr("href");
@@ -47,8 +47,8 @@ $(document).ready(function () {
             $("html, body").animate({
                 scrollTop: target.offset().top
             }, 500, function () {
-                window.location.hash = hash;
-                $(document).on("scroll", onScroll);
+                // window.location.hash = hash;
+                // $(document).on("scroll", onScroll);
             });
         });
     });
