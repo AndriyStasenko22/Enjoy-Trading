@@ -3,6 +3,9 @@
 .home-loyout {
   background: #fff url("../img/2.png") top center no-repeat;
   position: relative;
+  @media only screen and(max-width: 545px){
+    background-position: 50% -20vw;
+  }
 }
 
 .sectiom-home {
@@ -280,6 +283,9 @@
         position: relative;
         z-index: 2;
         max-width: 88%;
+        -webkit-box-shadow: 4px -4px 4px 0px #c8c8c8;
+        -moz-box-shadow:    4px -4px 4px 0px #c8c8c8;
+        box-shadow:         4px -4px 4px 0px #c8c8c8;
       }
       &:after {
         position: absolute;
@@ -322,7 +328,6 @@
     }
   }
   @media only screen and(max-width: 768px) {
-    //margin: 150px 0 95px;
     padding: 75px 0 47px;
     .section-about-top-block {
       padding-left: 20%;
@@ -358,6 +363,9 @@
       width: 100%;
       padding-left: 7.81%;
       margin-bottom: 20px;
+      .section-title-block{
+        padding-left: 12.19%;
+      }
     }
 
     .section-about-top-description {
@@ -386,9 +394,6 @@
 .service {
   padding: 78px 0 80px;
   position: relative;
-  //margin-bottom: 160px;
-  //margin: 79px 0 80px;
-  ////padding: 78.5px 0 80px;
   .service-container {
     position: relative;
     &:extend(.flex);
@@ -430,6 +435,9 @@
       position: relative;
       z-index: 2;
       max-width: 76.10%;
+      -webkit-box-shadow: 4px -4px 4px 0px #c8c8c8;
+      -moz-box-shadow:    4px -4px 4px 0px #c8c8c8;
+      box-shadow:         4px -4px 4px 0px #c8c8c8;
     }
     &:after {
       position: absolute;
@@ -502,7 +510,6 @@
   }
   @media only screen and (max-width: 768px) {
     padding: 75px 0 30px;
-    //margin-bottom: 60px;
     .section-title-block {
       padding-left: 20%;
       padding-top: 59px;
@@ -567,7 +574,6 @@
 .partners {
   position: relative;
   padding: 80px 0 133px;
-  //margin-bottom: 266px;
   .section-title-block {
     margin-bottom: 20px;
   }
@@ -578,7 +584,6 @@
 
   .partners-image-block {
     position: relative;
-    cursor: pointer;
     display: inline-block;
     &:hover {
       & > .partners-popup {

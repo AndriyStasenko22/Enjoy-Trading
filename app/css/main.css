@@ -892,6 +892,7 @@ footer .footer-desription {
   .partners-form input,
   .partners-form textarea {
     margin-bottom: 19px;
+    font-size: 12px;
   }
   .partners-form input::-webkit-input-placeholder,
   .partners-form textarea::-webkit-input-placeholder {
@@ -1179,6 +1180,7 @@ footer .footer-desription {
   .contact-form-block .contact-form input {
     margin-bottom: 5px;
     padding-left: 25px;
+    font-size: 12px;
   }
   .contact-form-block .contact-form input::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
@@ -1409,6 +1411,11 @@ footer .footer-desription {
 .home-loyout {
   background: #fff url("../img/2.png") top center no-repeat;
   position: relative;
+}
+@media only screen and (max-width: 545px) {
+  .home-loyout {
+    background-position: 50% -20vw;
+  }
 }
 .sectiom-home {
   position: relative;
@@ -1691,6 +1698,8 @@ footer .footer-desription {
   position: relative;
   z-index: 2;
   max-width: 88%;
+  -webkit-box-shadow: 4px -4px 4px 0px #c8c8c8;
+  box-shadow: 4px -4px 4px 0px #c8c8c8;
 }
 .section-about .section-about-bottom-block .sectiom-about-image-block:after {
   position: absolute;
@@ -1765,6 +1774,9 @@ footer .footer-desription {
     padding-left: 7.81%;
     margin-bottom: 20px;
   }
+  .section-about .section-about-top-block .section-title-block {
+    padding-left: 12.19%;
+  }
   .section-about .section-about-top-description {
     font-size: 16px;
     width: 95%;
@@ -1828,6 +1840,8 @@ footer .footer-desription {
   position: relative;
   z-index: 2;
   max-width: 76.10%;
+  -webkit-box-shadow: 4px -4px 4px 0px #c8c8c8;
+  box-shadow: 4px -4px 4px 0px #c8c8c8;
 }
 .service .service-image-block:after {
   position: absolute;
@@ -1977,7 +1991,6 @@ footer .footer-desription {
 }
 .partners .partners-image-block {
   position: relative;
-  cursor: pointer;
   display: inline-block;
 }
 .partners .partners-image-block:hover > .partners-popup {
